@@ -1,0 +1,27 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="login-form">
+    <mat-card class="form-card">
+      <mat-card-title>Sign In</mat-card-title>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" />
+          <mat-error>
+            Please enter a valid email
+          </mat-error>
+        </mat-form-field>
+  
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" />
+          <mat-error>
+            Password must be at least 6 characters
+          </mat-error>
+        </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="registrationForm.invalid">
+        Register
+      </button>
+    </mat-card>
+  </form>
+  

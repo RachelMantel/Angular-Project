@@ -1,0 +1,52 @@
+<div class="lesson-container">
+  <h2 class="lesson-title">Lessons</h2>
+
+  <div class="lesson-grid">
+    @for(lesson of lessons$.value; track lesson.id){
+    <mat-card class="lesson-card">
+      <mat-card-header class="lesson-header">
+        <mat-card-title class="lesson-card-title">{{ lesson.title }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content class="lesson-content">
+        <p>{{ lesson.content }}</p>
+      </mat-card-content>
+
+      <mat-card-actions class="lesson-actions">
+        @if(this.user$.value.role=="teacher"){
+        <button mat-icon-button class="edit-btn lesson-icon-btn" (click)="edit(lesson)">
+          <mat-icon class="icon edit-icon">edit</mat-icon>
+        </button>
+        <button mat-icon-button class="delete-btn lesson-icon-btn" (click)="deleteLesson(lesson.id)">
+          <mat-icon class="icon delete-icon">delete</mat-icon>
+        </button>
+        }
+      </mat-card-actions>
+
+    </mat-card>
+    }
+  </div>
+
+  @if(this.user$.value.role=="teacher"){
+    <button class="add-lesson-btn" mat-raised-button (click)="add()">
+      <mat-icon>add</mat-icon>
+      add
+    </button>
+  }
+</div>
+
+@if(isEdit){
+  <app-display-lesson
+    [lesson]="lessonChange"
+    (childSaveLesson)="updateLesson($event)"
+    class="lesson-modal">
+  </app-display-lesson>
+}
+
+@if(isAdd){
+  <app-display-lesson
+    [lesson]="lessonChange"
+    (childSaveLesson)="addLesson($event)"
+    class="lesson-modal">
+  </app-display-lesson>
+}

@@ -1,0 +1,30 @@
+@if(!login){
+<mat-toolbar>
+    <span class="spacer"></span>
+    <ng-container>
+      <button mat-button color="primary" (click)="signIn()">
+        <mat-icon>login</mat-icon> Sign In
+      </button>
+      <button mat-button color="primary" (click)="signUp()">
+        <mat-icon>person_add</mat-icon> Sign Up
+      </button>
+    </ng-container>
+</mat-toolbar>
+}
+  
+@else{
+  <mat-toolbar class="header">
+    <div class="left-section">
+      <nav class="nav-links">
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/courses">Courses List</a>
+      </nav>
+    </div>
+    
+    <div class="avatar">
+      {{ currentUser?.email?.charAt(0)?.toUpperCase() }}
+    </div>
+  </mat-toolbar>
+  
+}

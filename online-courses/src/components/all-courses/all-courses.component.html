@@ -1,0 +1,58 @@
+<div class="courses-container">
+    <h2 class="section-title">All Courses</h2>
+
+    <div class="courses-grid">
+      @for (course of courses$.value; track course.id) {
+        <mat-card class="course-card">
+          <mat-card-header>
+            <mat-card-title class="course-title">{{ course.title }}</mat-card-title>
+          </mat-card-header>
+  
+          <mat-card-content>
+            <p class="course-description">{{ course.description }}</p>
+          </mat-card-content>
+  
+          <mat-card-actions>
+            <button mat-icon-button (click)="ListOfLessons(course.id)">
+              <mat-icon>list_alt</mat-icon>
+            </button>
+            
+            @if (user$.value.role === 'teacher') {
+              <button mat-icon-button (click)="edit(course)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button  (click)="deleteCourse(course.id)">
+                <mat-icon>delete_outline</mat-icon>
+              </button>
+            }
+          </mat-card-actions>
+
+
+          @if(course.logIn==false){
+            
+            <button class="join-btn" (click)="addStudentToLesson(course)">join</button>
+          }
+          @if(course.logIn==true){
+            
+            <button class="remove-btn" (click)="deleteStudentFromLesson(course)">left</button>
+          }
+        </mat-card>
+      }
+    </div>
+
+    @if (user$.value.role === 'teacher') {
+        <button class="btn-add-course" mat-raised-button (click)="add()">
+          <mat-icon>add</mat-icon>
+        </button>
+      }
+  
+  </div>
+  
+
+  @if (editFlag) {
+    <app-display-course [course]="courseToChange" (childSaveCourse)="updateCourse($event)"></app-display-course>
+  }
+  
+  @if (addFlag) {
+    <app-display-course [course]="courseToChange" (childSaveCourse)="addCourse($event)"></app-display-course>
+  }

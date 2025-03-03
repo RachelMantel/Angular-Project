@@ -1,0 +1,43 @@
+.lesson-card{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #d5d6d6;
+    margin: 8px;;
+}
+
+.add-lesson-btn{
+    justify-content: center;
+    text-align: center;
+    background-color: #139298;
+    margin: 15px;
+    width:100px;
+}
+
+  .lesson-icon-btn {
+    transition: transform 0.2s ease-in-out, border-color 0.2s;
+    border-radius: 8px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid transparent;
+    background: transparent;
+  }
+  
+  .lesson-icon-btn:hover {
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+  
+  .icon {
+    font-size: 22px;
+  }
+  
+  .edit-icon {
+    color: #4CAF50; /* ירוק */
+  }
+  
+  .delete-icon {
+    color: #F44336; /* אדום */
+  }
+  

@@ -1,0 +1,108 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .courses-container {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    margin-top:100px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .course-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .course-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e7e98;
+    margin: 10px 0;
+  }
+
+  .course-description {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+  
+  .btn-add-course {
+    margin-top: 20px;
+    background-color: #139298;
+    color: white;
+    width:74.5vw;
+    border-radius: 10px;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  
+
+
+
+  /* עיצוב הכפתור להצטרפות לקורס */
+.join-btn, .remove-btn {
+  color: white;
+  border: none;
+  border-radius: 50px;  /* פינות מעוגלות מאוד (מעגלים) */
+  padding: 5px 10px; 
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  /* צלליות רכות */
+  text-transform: uppercase;  /* הפיכת הטקסט לאותיות גדולות */
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  margin: 5px;
+}
+
+
+.join-btn {
+  background-color: #70b473;  /* צבע ירוק מרענן */
+}
+
+
+
+.remove-btn {
+  background-color: #d26060;  /* אדום חמימות */
+}
+
