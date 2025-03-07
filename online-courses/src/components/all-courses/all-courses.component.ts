@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
 import { DisplayCourseComponent } from '../display-course/display-course.component';
 import { MyCoursesService } from '../../service/myCourses/my-courses.service';
 import { combineLatest } from 'rxjs';
+import { IconsPipe } from '../../pipes/icons.pipe';
 
 
 @Component({
   selector: 'app-courses-list',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatDialogModule,DisplayCourseComponent],
+  imports: [MatCardModule, MatIconModule, MatDialogModule,DisplayCourseComponent,IconsPipe],
   templateUrl: './all-courses.component.html',
   styleUrl: './all-courses.component.css'
 })

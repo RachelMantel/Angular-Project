@@ -12,12 +12,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { DisplayLessonComponent } from '../display-lesson/display-lesson.component';
+import { IconsPipe } from '../../pipes/icons.pipe';
 
 @Component({
   selector: 'app-lessons',
   standalone: true,
   imports: [MatListModule,MatIconModule,MatFormFieldModule,MatButtonModule,MatDialogModule,
-    MatInputModule,MatCardModule,MatGridListModule,DisplayLessonComponent],
+    MatInputModule,MatCardModule,MatGridListModule,DisplayLessonComponent,IconsPipe],
   templateUrl: './lessons.component.html',
   styleUrl: './lessons.component.css'
 })

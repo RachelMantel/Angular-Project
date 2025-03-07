@@ -34,10 +34,13 @@
   }
   
   .edit-icon {
-    color: #4CAF50; /* ירוק */
+    color: #4CAF50; 
   }
   
   .delete-icon {
-    color: #F44336; /* אדום */
+    color: #F44336;
   }
   
+  .lesson-container{
+    margin-top: 100px;
+  }

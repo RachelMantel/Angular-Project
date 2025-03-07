@@ -1,10 +1,10 @@
 <div class="courses-container">
-    <h2 class="section-title">All Courses</h2>
+    <h2 class="section-title">All Courses {{"list"|icons}}</h2>
 
     <div class="courses-grid">
       @for (course of courses$.value; track course.id) {
         <mat-card class="course-card">
-          <mat-card-header>
+          <mat-card-header> 
             <mat-card-title class="course-title">{{ course.title }}</mat-card-title>
           </mat-card-header>
   
