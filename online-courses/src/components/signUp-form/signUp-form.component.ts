@@ -14,8 +14,8 @@ import { AuthService } from '../../service/auth/auth.service';
   selector: 'app-signUp-form',
   standalone: true,
   imports: [MatCardModule, ReactiveFormsModule, MatInputModule,MatFormFieldModule,MatSelectModule,MatButtonModule],
-  templateUrl: './SignUp-form.component.html',
-  styleUrl: './SignUp-form.component.css',
+  templateUrl: './signUp-form.component.html',
+  styleUrl: './signUp-form.component.css',
 })
 export class signUpFormComponent {
   registrationForm: FormGroup;
