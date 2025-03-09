@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Directive } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Course } from '../../models/course.model';
@@ -10,12 +10,13 @@ import { DisplayCourseComponent } from '../display-course/display-course.compone
 import { MyCoursesService } from '../../service/myCourses/my-courses.service';
 import { combineLatest } from 'rxjs';
 import { IconsPipe } from '../../pipes/icons.pipe';
+import { DirectiveDirective } from '../../directive/directive.directive';
 
 
 @Component({
   selector: 'app-courses-list',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatDialogModule,DisplayCourseComponent,IconsPipe],
+  imports: [MatCardModule, MatIconModule, MatDialogModule,DisplayCourseComponent,IconsPipe,DirectiveDirective],
   templateUrl: './all-courses.component.html',
   styleUrl: './all-courses.component.css'
 })

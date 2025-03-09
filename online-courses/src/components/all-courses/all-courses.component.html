@@ -3,7 +3,8 @@
 
     <div class="courses-grid">
       @for (course of courses$.value; track course.id) {
-        <mat-card class="course-card">
+        <mat-card class="course-card"
+        [appDirective]="course.logIn==true">
           <mat-card-header> 
             <mat-card-title class="course-title">{{ course.title }}</mat-card-title>
           </mat-card-header>
