@@ -15,6 +15,9 @@ export class DirectiveDirective implements OnChanges {
       this.el.nativeElement.style.backgroundColor ="lightgrey"
       this.el.nativeElement.setAttribute('title', 'you did not join already!!');
     } 
+    else{
+      this.el.nativeElement.style.backgroundColor ="white"
+    }
   }
 
 }
